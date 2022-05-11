@@ -42,7 +42,9 @@ class App extends Component {
             </div>
           ))} */}
           <p id="qoute">{array[page]?.text}</p>
-          <p id="qoute-by">{array[page]?.author}</p>
+          <p id="qoute-by">
+            {array[page]?.author ? array[page]?.author : "No Author"}
+          </p>
           <div className="flex">
             <button onClick={this.changeQuotes} id="btn">
               Next quote
