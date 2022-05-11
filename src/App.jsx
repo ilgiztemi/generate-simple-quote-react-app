@@ -17,10 +17,6 @@ class App extends Component {
         this.setState({ array: data });
         console.log(this.state.array[0]);
       });
-    // setTimeout(() => {
-    // }, 2000)
-
-    // .catch((error) => console.log(error));
   }
   changeQuotes = () => {
     const { array, page } = this.state;
@@ -35,12 +31,6 @@ class App extends Component {
       <div className="container">
         <div className="content">
           <i className="fa-solid fa-quote-left"></i>
-          {/* {array.map((item) => (
-            <div key={item.page}>
-              <p id="qoute">{item.text}</p>
-              <p id="qoute-by">{item.author}</p>
-            </div>
-          ))} */}
           <p id="qoute">{array[page]?.text}</p>
           <p id="qoute-by">
             {array[page]?.author ? array[page]?.author : "No Author"}
